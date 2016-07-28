@@ -2,11 +2,11 @@
   "development": {
     "main": {
       "adapter": "postgres",
-      "host": "{{= process.env.OPENSHIFT_POSTGRESQL_DB_HOST || 'localhost' }}",
-      "port": "{{= process.env.OPENSHIFT_POSTGRESQL_DB_PORT || 5432 }}",
-      "user": "{{= process.env.OPENSHIFT_POSTGRESQL_DB_USERNAME || 'postgres' }}",
-      "password": "{{= process.env.OPENSHIFT_POSTGRESQL_DB_PASSWORD || '' }}",
-      "database": "{{= process.env.OPENSHIFT_GEAR_NAME || 'tweet_api_development' }}"
+      "host": "{{= env.OPENSHIFT_POSTGRESQL_DB_HOST || 'localhost' }}",
+      "port": "{{= env.OPENSHIFT_POSTGRESQL_DB_PORT || 5432 }}",
+      "user": "{{= env.OPENSHIFT_POSTGRESQL_DB_USERNAME || 'postgres' }}",
+      "password": "{{= env.OPENSHIFT_POSTGRESQL_DB_PASSWORD || '' }}",
+      "database": "{{= env.OPENSHIFT_GEAR_NAME || 'tweet_api_development' }}"
     }
   }
 }
